@@ -1,26 +1,94 @@
-# digital-clock-in-java
-digital clock using java
-⏰ Digital Clock
+⏰ Digital Clock (Java)
 
-A simple and responsive Digital Clock built using HTML, CSS, and JavaScript.
-This project displays the current system time in real-time and updates every second.
+A real-time Digital Clock application built using Java.
+This project displays the current system time and updates automatically every second using Java's Date and Timer classes.
 
 🚀 Features
 
-🕒 Real-time clock
+🕒 Displays real-time system clock
 
-⏱ Updates every second
+⏱ Updates every second automatically
 
-🎨 Clean and modern UI
+🎨 Simple and clean GUI
 
-📱 Responsive design
+💻 Built using Java Swing
 
-🌙 Supports 12-hour / 24-hour format (if implemented)
+⚡ Lightweight desktop application
 
 🛠 Technologies Used
 
-HTML5 – Structure of the clock
+Java
 
-CSS3 – Styling and layout design
+Swing (javax.swing)
 
-JavaScript (Vanilla JS) – Time functionality and updates
+AWT
+
+java.time / Date class
+
+Timer / Thread
+
+📂 Project Structure
+DigitalClock/
+│
+├── DigitalClock.java
+└── README.md
+
+💡 How It Works
+
+The program fetches the current system time.
+
+A Timer or Thread updates the clock every 1 second.
+
+The time is displayed inside a JLabel.
+
+Example logic:
+
+Timer timer = new Timer(1000, e -> {
+    LocalTime time = LocalTime.now();
+    label.setText(time.format(DateTimeFormatter.ofPattern("HH:mm:ss")));
+});
+timer.start();
+
+▶ How to Run the Project
+Using Command Line:
+
+Open terminal
+
+Navigate to project folder
+
+Compile:
+
+javac DigitalClock.java
+
+
+Run:
+
+java DigitalClock
+
+📌 Requirements
+
+Java JDK 8 or above
+
+Any IDE (Eclipse, NetBeans, IntelliJ) or Command Prompt
+
+📸 UI Components Used
+
+JFrame
+
+JLabel
+
+Timer
+
+Font Styling
+
+📌 Future Enhancements
+
+Add date display
+
+Add 12-hour and 24-hour toggle
+
+Add alarm feature
+
+Add stopwatch/timer
+
+Add custom themes
